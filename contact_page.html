@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact us form UI design</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: san-serif;
+        background: url(./img/priscilla-du-preez-ggeZ9oyI-PE-unsplash.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .box {
+        margin: 0 auto;
+        align-self: center;
+        position: relative;
+        top: 50%;
+        background: rgba(0, 0, 0, 0.8);
+        width: 50vw;
+        border-radius: 10px;
+        padding: 40px;
+      }
+      .box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+      }
+      .box .inputbox {
+        position: relative;
+      }
+      .box .inputbox input {
+        width: 100%;
+        padding: 15px 0;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+      }
+      .box .inputbox label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+      .box .inputbox input:focus ~ label,
+      .box .inputbox input:valid ~ label {
+        top: -18px;
+        left: 0;
+        color: #03a9f4;
+        font-size: 12px;
+      }
+      .box input[type="submit"] {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #03a9f4;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2>Contact Us</h2>
+      <form>
+        <!--First Name-->
+        <div class="inputbox">
+          <input type="text" name="" required="" />
+          <label> First Name </label>
+          <!--last Name-->
+        </div>
+        <div class="inputbox">
+          <input type="text" name="" required="" />
+          <label> Last Name </label>
+        </div>
+        <!--Email Address-->
+        <div class="inputbox">
+          <input type="email" name="" required="" />
+          <label> Email Address </label>
+        </div>
+        <!--Mobile Number-->
+        <div class="inputbox">
+          <input type="number" name="" required="" />
+          <label> Mobile Number </label>
+        </div>
+        <!--Message-->
+        <div class="inputbox">
+          <input type="text" name"" required="">
+          <label> Write a message here....</label>
+        </div>
+        <!--Shbmit Button-->
+        <div class="inputbox">
+          <input type="submit" value="Send" name="" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
