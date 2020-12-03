@@ -4,3 +4,6 @@
 . carousel-container {
   margin-top: 200px;
 }
+#main_nav {
+  justify-content: space-around;
+}

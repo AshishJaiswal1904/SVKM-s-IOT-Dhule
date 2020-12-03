@@ -1,254 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- Bootstrap CSS -->
+<!--My Contact Us  
+Designed by Himanshu Sharma (Dhule-MH)
+ -->
+ <!DOCTYPE html>
+ <!-- Created by Himanshu sharma -->
+ <html lang="en" dir="ltr">
+ 
+   <head>
+     <meta charset="utf-8">
+     <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+     <!-- <title>Responsive Contact us Form |Himanshu Sharma </title> -->
+     <style>
+       @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+ *{
+   margin: 0;
+   padding: 0;
+   outline: none;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+ }
+ body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   padding: 40px;
+   background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%);
+ }
+ .container{
+   max-width: 800px;
+   background: #fff;
+   width: 800px;
+   padding: 25px 40px 10px 40px;
+   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+ }
+ .container .text{
+   text-align: center;
+   font-size: 35px;
+   font-weight: 600;
+   background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+ .container form{
+   padding: 30px 0 0 0;
+ }
+ .container form .form-row{
+   display: flex;
+   margin: 32px 0;
+ }
+ form .form-row .input-data{
+   width: 100%;
+   height: 40px;
+   margin: 0 20px;
+   position: relative;
+ }
+ form .form-row .textarea{
+   height: 70px;
+ }
+ .input-data input,
+ .textarea textarea{
+   display: block;
+   width: 100%;
+   height: 100%;
+   border: none;
+   font-size: 17px;
+   border-bottom: 2px solid rgba(0,0,0, 0.12);
+ }
+ .input-data input:focus ~ label, .textarea textarea:focus ~ label,
+ .input-data input:valid ~ label, .textarea textarea:valid ~ label{
+   transform: translateY(-20px);
+   font-size: 14px;
+   color: #3498db;
+ }
+ .textarea textarea{
+   resize: none;
+   padding-top: 10px;
+ }
+ .input-data label{
+   position: absolute;
+   pointer-events: none;
+   bottom: 10px;
+   font-size: 16px;
+   transition: all 0.3s ease;
+ }
+ .textarea label{
+   width: 100%;
+   bottom: 40px;
+   background: #fff;
+ }
+ .input-data .underline{
+   position: absolute;
+   bottom: 0;
+   height: 2px;
+   width: 100%;
+ }
+ .input-data .underline:before{
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 100%;
+   background: #3498db;
+   transform: scaleX(0);
+   transform-origin: center;
+   transition: transform 0.3s ease;
+ }
+ .input-data input:focus ~ .underline:before,
+ .input-data input:valid ~ .underline:before,
+ .textarea textarea:focus ~ .underline:before,
+ .textarea textarea:valid ~ .underline:before{
+   transform: scale(1);
+ }
+ .submit-btn .input-data{
+   overflow: hidden;
+   height: 45px!important;
+   width: 25%!important;
+ }
+ .submit-btn .input-data .inner{
+   height: 100%;
+   width: 300%;
+   position: absolute;
+   left: -100%;
+   background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+   transition: all 0.4s;
+ }
+ .submit-btn .input-data:hover .inner{
+   left: 0;
+ }
+ .submit-btn .input-data input{
+   background: none;
+   border: none;
+   color: #fff;
+   font-size: 17px;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   cursor: pointer;
+   position: relative;
+   z-index: 2;
+ }
+ @media (max-width: 700px) {
+   .container .text{
+     font-size: 30px;
+   }
+   .container form{
+     padding: 10px 0 0 0;
+   }
+   .container form .form-row{
+     display: block;
+   }
+   form .form-row .input-data{
+     margin: 35px 0!important;
+   }
+   .submit-btn .input-data{
+     width: 40%!important;
+   }
+ }
+     </style>
+    <link rel="stylesheet" href="./css/sm-icons.css" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./blog.css" />
-
-
-    <title>Hello, world!</title>
-
-    <!-- jQuery -->
-    <script
-      src="./js/jquery-2.2.4.min.js"
-      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Bootstrap files (jQuery first, then Popper.js, then Bootstrap JS) -->
-    <script src="./js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-    <!-- Navigation Bar -->
-    <!-- Fixed navbar -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">PowerSoft</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              About Us
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">About SVKM</a>
-              <a class="dropdown-item" href="#">About SVKM's IOT, Dhule</a>
-              <a class="dropdown-item" href="#">Vision and Mission</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Infrastructure</a>
-              <a class="dropdown-item" href="#">Affiliation</a>
-            </div>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Departments
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Software Solutions</a>
-              <a class="dropdown-item" href="#">Mobile Devlopment</a>
-              <a class="dropdown-item" href="#">IT Consulting</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Digital Transformation</a>
-            </div>
-          </li>
-           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              News & Events
-            </a>
-
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Software Solutions</a>
-              <a class="dropdown-item" href="#">Mobile Devlopment</a>
-              <a class="dropdown-item" href="#">IT Consulting</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Digital Transformation</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact us</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Brand</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#main_nav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="main_nav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home </a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Services </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                data-toggle="dropdown"
-              >
-                More items
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
-                <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
-                <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                News & Events
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Software Solutions</a>
-                <a class="dropdown-item" href="#">Mobile Devlopment</a>
-                <a class="dropdown-item" href="#">IT Consulting</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Digital Transformation</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <!-- navbar-collapse.// -->
-      </div>
-      <!-- container //  -->
-    </nav>
-
-    <div class="container jumbo">
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>
-          This example is a quick exercise to illustrate how the default, static
-          and fixed to top navbar work. It includes the responsive CSS and HTML,
-          so it also adapts to your viewport and device.
-        </p>
-        <p>
-          To see the difference between static and fixed top navbars, just
-          scroll.
-        </p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="#" role="button"
-            >View navbar docs &raquo;</a
-          >
-        </p>
-      </div>
-    </div>
-    <!-- /container -->
-    <div class="container">
-      <p>
-        See full live action implemented in our site,
-        <a href="https://reezhdesign.com" rel="author">ReeZh Design</a>
-      </p>
-    </div>
-    <!-- End of Simple Article -->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+ 
+   <body>
+     <div class="container">
+       <div class="text">
+         Responsive Contact us Form</div>
+       <form action="#">
+         <div class="form-row">
+           <div class="input-data">
+             <input type="text" required>
+             <div class="underline">
+             </div>
+             <label for="">Full Name</label>
+           </div>
+           <div class="input-data">
+             <input type="number" required>
+             <div class="underline">
+             </div>
+             <label for="">Mobile Number</label>
+           </div>
+         </div>
+         <div class="form-row">
+           <div class="input-data">
+             <input type="email" required>
+             <div class="underline">
+             </div>
+             <label for="">Email Address</label>
+           </div>
+           <div class="input-data">
+             <input type="text" required>
+             <div class="underline">
+             </div>
+             <label for="">Suggestion</label>
+           </div>
+         </div>
+         <div class="form-row">
+           <div class="input-data textarea">
+             <!-- Due to more textarea tag I got an error.. SO I changed the name of texarea tag into changeit. Replace the changeit text/tag to textarea-->
+             <changeit rows="8" cols="80" required></changeit>
+             <br />
+             <div class="underline">
+             </div>
+             <label for=""></label>
+ 
+ 
+             <br />
+             <div class="form-row submit-btn">
+               <div class="input-data">
+                 <div class="inner"></div>
+                 <input type="submit" value="submit">
+               </div>
+             </div>
+             
+             <a href="#" class="fa fa-facebook"></a>
+             <a href="#" class="fa fa-twitter"></a>
+             <a href="#" class="fa fa-google"></a>
+             <a href="#" class="fa fa-linkedin"></a>
+             <a href="#" class="fa fa-youtube"></a>
+             <a href="#" class="fa fa-instagram"></a>
+       </form>
+       </div>
+ 
+ </html>
